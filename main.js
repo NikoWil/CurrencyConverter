@@ -15,37 +15,27 @@ function clear_result() {
     clear_child_elements(result_div);
 }
 
-function display_missing_currency_error() {
+function display_text(text) {
     clear_result();
 
     const result_div = document.getElementById('conversionResult');
     const paragraph = document.createElement('p');
-    const textNode = document.createTextNode('Error: missing from or to value!');
+    const textNode = document.createTextNode(text);
 
     paragraph.appendChild(textNode);
     result_div.appendChild(paragraph);
+}
+
+function display_missing_currency_error() {
+    display_text('Error: missing from or to value!');
 }
 
 function display_invalid_currency_error(from, to, date) {
-    clear_result();
-
-    const result_div = document.getElementById('conversionResult');
-    const paragraph = document.createElement('p');
-    const textNode = document.createTextNode(`Error: the conversion from "${from}" to "${to}" is not defined for date "${date}"`);
-
-    paragraph.appendChild(textNode);
-    result_div.appendChild(paragraph);
+    display_text(`Error: the conversion from "${from}" to "${to}" is not defined for date "${date}"`);
 }
 
 function display_converted_amount(from, to, amount, converted) {
-    clear_result();
-
-    const result_div = document.getElementById('conversionResult');
-    const paragraph = document.createElement('p');
-    const textNode = document.createTextNode(`${amount} ${from} are ${converted} ${to}.`);
-
-    paragraph.appendChild(textNode);
-    result_div.appendChild(paragraph);
+    display_text(`${amount} ${from} are ${converted} ${to}.`);
 }
 
 async function get_conversion_rate() {
