@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Vanilla HTML, CSS and JavaScript</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+</head>
+
+<body onload="populate_fields()">
+    <button class="button button1" type="button" onclick="click_counter()">Click me!</button>
+    <button class="button button1" type="button" onclick="clear_clicks()">Clear list</button>
+
+    <ul id="myList">
+    </ul>
+
+    <label>Pick a date:
+        <input type="date" id="date" name="date"><br>
+    </label>
+
+    <label>
+        From: <br>
+        Currency:
+        <input type="text" list="currencyList" id="fromCurrency" />
+        <br>
+        Amount:
+        <input type="number" min="0" step="0.01" value="0" id="amount" />
+    </label>
+    <br>
+    <label>
+        To currency:
+        <input type="text" list="currencyList" id="toCurrency" />
+    </label>
+    <br>
+    <!-- This datalist will be filled dynamically at body onload -->
+
+    <datalist id="currencyList"></datalist>
+
+    <button class="button button1" type="button" onclick="convert_currencies()">Convert Currencies</button>
+
+    <div id="conversionResult"> </div>
+</body>
+
+</html>
