@@ -1,21 +1,3 @@
-let count = 0;
-
-function click_counter() {
-    const id = ++count;
-    console.log("Clicke-di-click No " + id + "!");
-    const list = document.getElementById('myList');
-    const entry = document.createElement('li');
-    entry.appendChild(document.createTextNode('Clicke-di-click No ' + id + '!'));
-    list.appendChild(entry);
-}
-
-function clear_clicks() {
-    count = 0;
-
-    const list = document.getElementById('myList');
-    clear_child_elements(list);
-}
-
 function clear_child_elements(dom_elem) {
     while (dom_elem.firstChild) {
         dom_elem.removeChild(dom_elem.lastChild);
