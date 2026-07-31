@@ -141,6 +141,10 @@ function log_element(name: string, elem: any) {
     console.log(`${name}: ${elem}`);
 }
 
+export function add(a: number, b: number): number {
+    return a + b;
+}
+
 populate_fields();
 document.querySelector<HTMLButtonElement>('.button1')
     ?.addEventListener('click', convert_currencies);
