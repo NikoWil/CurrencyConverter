@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es2025",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "noImplicitAny": true,
+        "isolatedModules": true,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+    },
+    "include": [
+        "src"
+    ]
+}
