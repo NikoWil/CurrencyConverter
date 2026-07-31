@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { add } from './main';
+import { add } from './lib';
 
 describe('add', () => {
     it('adds numbers', () => {
