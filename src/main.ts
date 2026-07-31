@@ -140,3 +140,7 @@ function log_element(name: string, elem: any) {
     console.log(`${name} type: ${Object.prototype.toString.call(elem)}`);
     console.log(`${name}: ${elem}`);
 }
+
+populate_fields();
+document.querySelector<HTMLButtonElement>('.button1')
+    ?.addEventListener('click', convert_currencies);
