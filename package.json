@@ -5,9 +5,11 @@
   "main": "main.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc --noEmit && vitest run && vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
