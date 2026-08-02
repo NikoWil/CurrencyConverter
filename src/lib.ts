@@ -136,7 +136,7 @@ export async function populate_fields() {
     }
 }
 
-function log_element(name: string, elem: any) {
+function log_element(name: string, elem: unknown) {
     console.log(`${name} type: ${Object.prototype.toString.call(elem)}`);
     console.log(`${name}: ${elem}`);
 }
