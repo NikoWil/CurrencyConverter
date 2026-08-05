@@ -1,43 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-
-<head>
+  <head>
     <title>Vanilla HTML, CSS and JavaScript</title>
 
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/main.css" />
     <script type="module" src="src/main.ts"></script>
-</head>
+  </head>
 
-<body>
-    <ul id="myList">
-    </ul>
+  <body>
+    <ul id="myList"></ul>
 
-    <label>Pick a date:
-        <input type="date" id="date" name="date"><br>
+    <label
+      >Pick a date: <input type="date" id="date" name="date" /><br />
     </label>
 
     <label>
-        From: <br>
-        Currency:
-        <input type="text" list="currencyList" id="fromCurrency" />
-        <br>
-        Amount:
-        <input type="number" min="0" step="0.01" value="0" id="amount" />
+      From: <br />
+      Currency:
+      <input type="text" list="currencyList" id="fromCurrency" />
+      <br />
+      Amount:
+      <input type="number" min="0" step="0.01" value="0" id="amount" />
     </label>
-    <br>
+    <br />
     <label>
-        To currency:
-        <input type="text" list="currencyList" id="toCurrency" />
+      To currency:
+      <input type="text" list="currencyList" id="toCurrency" />
     </label>
-    <br>
+    <br />
     <!-- This datalist will be filled dynamically at body onload -->
 
     <datalist id="currencyList"></datalist>
 
     <button class="button button1" type="button">Convert Currencies</button>
 
-    <div id="conversionResult"> </div>
-</body>
-
+    <div id="conversionResult"></div>
+  </body>
 </html>
