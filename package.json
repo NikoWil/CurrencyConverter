@@ -5,12 +5,13 @@
   "main": "main.js",
   "scripts": {
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint src",
     "dev": "vite",
     "check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "build": "npm run check && npm run lint && npm run test && vite build",
+    "build": "npm run format:check && npm run check && npm run lint && npm run test && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
